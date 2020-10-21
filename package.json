@@ -15,8 +15,8 @@
     "prop-types": "15",
     "react": "16",
     "react-dom": "16",
-    "react-helmet": "5",
-    "typescript": "3"
+    "react-helmet": "6",
+    "typescript": "4.0"
   },
   "scripts": {
     "build": "tsc && gatsby build",
@@ -24,6 +24,6 @@
     "tsc": "tsc"
   },
   "devDependencies": {
-    "@types/react-helmet": "5"
+    "@types/react-helmet": "6"
   }
 }
