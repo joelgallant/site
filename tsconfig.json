@@ -5,12 +5,11 @@
     "moduleResolution": "node",
     "lib": ["esnext", "DOM"],
     "target": "esnext",
+    "jsx": "react",
     "strict": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "allowSyntheticDefaultImports": true,
-    "noImplicitAny": false,
-    "jsx": "react"
+    "allowSyntheticDefaultImports": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
