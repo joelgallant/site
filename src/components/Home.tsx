@@ -4,9 +4,8 @@ import styled from '@emotion/styled'
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  height: 2000px;
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0 auto 50px auto;
 
   @media (max-width: 900px) {
     width: 80vw;
