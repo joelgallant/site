@@ -137,6 +137,10 @@ const BackgroundSvg = styled.svg`
     // even it out on mobile devices
     transform: rotate(10deg) scale(1.5) translateY(10px) translateX(-40px);
   }
+
+  @media (max-width: 250px) {
+    transform: rotate(15deg) scale(1.5) translateY(30px);
+  }
 `
 
 const Background = () => {
