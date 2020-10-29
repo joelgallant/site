@@ -135,7 +135,7 @@ const BackgroundSvg = styled.svg`
     height: 400px;
     max-height: 400px;
     // even it out on mobile devices
-    transform: rotate(10deg) scale(1.5) translateY(10px) translateX(-80px);
+    transform: rotate(10deg) scale(1.5) translateY(10px) translateX(-40px);
   }
 `
 
