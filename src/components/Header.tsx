@@ -8,9 +8,14 @@ const Header = styled.div`
   flex-direction: row;
   justify-content: space-between;
   text-transform: uppercase;
+  margin-bottom: 50px;
 
   @media (max-width: 750px) {
     flex-direction: column;
+  }
+
+  > * {
+    z-index: 2;
   }
 `
 
@@ -44,7 +49,9 @@ const Name = styled.div`
   color: white;
   font-weight: bold;
   letter-spacing: 0.02em;
-  @media (max-width: 750px) { text-align: center; }
+  @media (max-width: 750px) {
+    text-align: center;
+  }
 `
 
 const Subtitle = styled.div`
@@ -53,7 +60,9 @@ const Subtitle = styled.div`
   letter-spacing: 0.06em;
   opacity: 90%;
 
-  @media (max-width: 750px) { text-align: center; }
+  @media (max-width: 750px) {
+    text-align: center;
+  }
 `
 
 const NavLink = styled.div`
@@ -124,10 +133,10 @@ export default function () {
 const animationLength = 10
 
 const BackgroundSvg = styled.svg`
-  position: fixed;
+  position: absolute;
   top: 0;
-  z-index: -1;
-  width: 100%;
+  z-index: 1;
+  width: 100vw;
   min-height: 230px;
   max-height: 270px;
 
@@ -230,7 +239,7 @@ const Icons = () => (
 )
 
 const LinkedIn = () => (
-  <Link to="https://www.linkedin.com/in/gallantjoel">
+  <a href="https://www.linkedin.com/in/gallantjoel">
     <IconSvg
       role="img"
       fill-rule="evenodd"
@@ -246,11 +255,11 @@ const LinkedIn = () => (
         <path d="M16,0C7.2,0,0,7.2,0,16s7.2,16,16,16s16-7.2,16-16S24.8,0,16,0z M11.4,24.2H7.5V12.5h3.9V24.2z M9.4,10.9L9.4,10.9c-1.3,0-2.2-0.9-2.2-2c0-1.2,0.9-2,2.2-2s2.2,0.9,2.2,2C11.6,10,10.8,10.9,9.4,10.9z M25.4,24.2h-3.9v-6.3 c0-1.6-0.6-2.7-2-2.7c-1.1,0-1.7,0.7-2,1.4c-0.1,0.3-0.1,0.6-0.1,1v6.5h-3.9c0,0,0.1-10.6,0-11.7h3.9v1.7c0.5-0.8,1.4-1.9,3.5-1.9 c2.6,0,4.5,1.7,4.5,5.3V24.2z"></path>
       </g>
     </IconSvg>
-  </Link>
+  </a>
 )
 
 const Github = () => (
-  <Link to="https://github.com/joelgallant">
+  <a href="https://github.com/joelgallant">
     <IconSvg
       role="img"
       fill-rule="evenodd"
@@ -265,5 +274,5 @@ const Github = () => (
         <path d="M16.3,2C8,2,1.3,8.7,1.3,17 c0,6.6,4.3,12.2,10.2,14.2c0.7,0.1,1-0.3,1-0.7c0-0.4,0-1.3,0-2.5c-4.2,0.9-5-2-5-2c-0.7-1.7-1.7-2.2-1.7-2.2 c-1.4-0.9,0.1-0.9,0.1-0.9c1.5,0.1,2.3,1.5,2.3,1.5c1.3,2.3,3.5,1.6,4.4,1.2c0.1-1,0.5-1.6,1-2c-3.3-0.4-6.8-1.7-6.8-7.4 c0-1.6,0.6-3,1.5-4c-0.2-0.4-0.7-1.9,0.1-4c0,0,1.3-0.4,4.1,1.5c1.2-0.3,2.5-0.5,3.7-0.5c1.3,0,2.6,0.2,3.7,0.5 c2.9-1.9,4.1-1.5,4.1-1.5c0.8,2.1,0.3,3.6,0.1,4c1,1,1.5,2.4,1.5,4c0,5.8-3.5,7-6.8,7.4c0.5,0.5,1,1.4,1,2.8c0,2,0,3.6,0,4.1 c0,0.4,0.3,0.9,1,0.7c5.9-2,10.2-7.6,10.2-14.2C31.2,8.7,24.5,2,16.3,2z"></path>
       </g>
     </IconSvg>
-  </Link>
+  </a>
 )

@@ -1,14 +1,14 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import styled from '@emotion/styled'
 
 import PageContainer from '../components/PageContainer'
 import Header from '../components/Header'
+import Home from '../components/Home'
 
 export default function () {
   return (
     <PageContainer>
       <Header />
+      <Home />
     </PageContainer>
   )
 }
