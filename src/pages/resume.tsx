@@ -1,9 +1,11 @@
 import React from 'react'
+import PageContainer from '../components/PageContainer'
+import Resume from '../components/Resume'
 
 export default function () {
   return (
-    <div>
-      <h1>My Resume</h1>
-    </div>
+    <PageContainer title="Resume of Joel Gallant">
+      <Resume />
+    </PageContainer>
   )
 }

@@ -24,5 +24,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-less`,
+    `gatsby-plugin-mdx`,
   ],
 }

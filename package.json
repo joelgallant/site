@@ -12,9 +12,12 @@
   "dependencies": {
     "@emotion/core": "10",
     "@emotion/styled": "10",
+    "@mdx-js/mdx": "1",
+    "@mdx-js/react": "1",
     "framer-motion": "2",
     "gatsby": "2",
     "gatsby-image": "2",
+    "gatsby-plugin-mdx": "1",
     "gatsby-plugin-react-helmet": "3",
     "gatsby-plugin-sharp": "2",
     "gatsby-plugin-typescript": "2",
