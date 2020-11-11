@@ -12,3 +12,8 @@ declare module '*.jpg' {
   let imageURL: string;
   export default imageURL;
 }
+
+declare module '*.svg' {
+  let imageURL: string;
+  export default imageURL;
+}
