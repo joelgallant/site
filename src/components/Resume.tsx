@@ -69,6 +69,10 @@ export default function () {
           <img src={mail} height="40px" />
         </a>
       </ImageSection>
+
+      <NotInPrint>
+        <a href="../resume.pdf">PDF Version</a>
+      </NotInPrint>
     </Container>
   )
 }
@@ -219,4 +223,13 @@ const ImageSection = styled(SectionContent)`
   a {
     margin: 0 15px;
   }
+`
+
+const NotInPrint = styled.div`
+  @media print {
+    display: none;
+  }
+
+  display: flex;
+  justify-content: center;
 `
