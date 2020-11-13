@@ -11,6 +11,10 @@ import github from '../images/github.svg'
 import gitlab from '../images/gitlab.svg'
 import mail from '../images/mail.svg'
 
+// Generating a PDF:
+// - Chrome ctrl-p
+// - Customized margins, 10mm, 0, 6.5mm, 0
+
 export default function () {
   return (
     <Container>
@@ -29,19 +33,19 @@ export default function () {
           <ResumeTools />
         </ListSection>
       </Section>
-      <ExperienceSection>
+      <Section>
         <SectionTitle>Experience</SectionTitle>
         <SectionContent>
           <ResumeExperience />
         </SectionContent>
-      </ExperienceSection>
+      </Section>
       <Section>
         <SectionTitle>Achievements & Projects</SectionTitle>
         <SectionContent>
           <ResumeProjects />
         </SectionContent>
       </Section>
-      <Section>
+      <Section style={{ marginTop: 20 }}>
         <SectionTitle style={{ height: 40 }}>Education</SectionTitle>
         <SectionContent>
           <ResumeEducation />
@@ -75,6 +79,17 @@ const Container = styled.div`
   max-width: 900px;
   margin: 0 auto 50px auto;
 
+  p {
+    font-size: 0.9em;
+  }
+
+  @media print {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-25px);
+  }
+
   @media (max-width: 900px) {
     width: 80vw;
   }
@@ -107,23 +122,31 @@ const Section = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 20px;
+
+  @media print {
+    margin-top: 0;
+  }
 `
 
 const SectionTitle = styled.div`
   height: 60px;
-  flex: 0 0 15%;
+  min-width: 100px;
+  flex-basis: 0;
+
+  padding-left: 40px;
+  padding-right: 30px;
+  margin-right: 20px;
+  border-right: 1px solid #999;
+
   font-size: 1.1em;
   font-style: italic;
   font-weight: bold;
   font-family: Serif;
   text-align: end;
-  border-right: 1px solid #999;
-  padding-left: 40px;
-  padding-right: 30px;
-  margin-right: 20px;
 
   @media print {
     padding-left: 0;
+    min-width: 80px;
   }
 `
 
@@ -138,6 +161,10 @@ const SectionContent = styled.div`
 
     &:not(:first-of-type) {
       margin-top: 30px;
+    }
+
+    @media print {
+      margin-top: 1px !important;
     }
 
     span {
@@ -164,20 +191,13 @@ const SectionContent = styled.div`
   }
 `
 
-const ExperienceSection = styled(Section)`
-  @media print {
-    p:nth-child(6) {
-      page-break-after: always;
-    }
-  }
-`
-
 const ListSection = styled(SectionContent)`
   display: flex;
   flex-direction: row;
 
   .list {
     flex: calc(1 / 3);
+    margin-left: 15px;
 
     h4 {
       text-decoration: underline;
