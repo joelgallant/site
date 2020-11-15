@@ -5,6 +5,7 @@ import favicon from '../favicon.ico';
 
 const Inner = styled.div`
   overflow: hidden !important;
+  transform: translateZ(0);
 `
 
 type Props = React.PropsWithChildren<{ title: string }>
