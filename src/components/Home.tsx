@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import HomeIntro from './HomeIntro.mdx';
-import HomeSkills from './HomeSkills.mdx';
-import HomeRecommendations from './HomeRecommendations.mdx';
+import HomeIntro from './HomeIntro.mdx'
+import HomeSkills from './HomeSkills.mdx'
+import HomeRecommendations from './HomeRecommendations.mdx'
 
 export default function () {
   return (
@@ -28,7 +28,7 @@ const Container = styled.div`
 const Box = styled.div`
   display: flex;
   flex-direction: column;
-  width: 70%;
+  margin: 0 5%;
 
   &:not(:first-of-type) {
     margin-top: 50px;
@@ -42,14 +42,6 @@ const Box = styled.div`
     }
   }
 
-  @media (max-width: 990px) {
-    margin: 0 5%;
-  }
-
-  @media (max-width: 750px) {
-    width: 100%;
-  }
-
   h2 {
     margin: 0;
   }
@@ -59,11 +51,31 @@ const Box = styled.div`
   }
 `
 
-const LeftBox = Box;
+const LeftBox = styled(Box)`
+  align-self: flex-start;
+
+  margin-right: 30%;
+  @media (max-width: 900px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+`
 
 const RightBox = styled(Box)`
   align-self: flex-end;
   text-align: end;
+
+  margin-left: 30%;
+  @media (max-width: 900px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  // go back to the left when < 650px
+  @media (max-width: 650px) {
+    align-self: flex-start;
+    text-align: start;
+  }
 `
 
 const Intro = () => (
