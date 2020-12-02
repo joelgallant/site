@@ -134,10 +134,10 @@ const Section = styled.div`
 
 const SectionTitle = styled.div`
   height: 60px;
-  min-width: 100px;
+  min-width: 130px;
   flex-basis: 0;
 
-  padding-left: 40px;
+  padding-left: 30px;
   padding-right: 30px;
   margin-right: 20px;
   border-right: 1px solid #999;
