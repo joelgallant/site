@@ -121,7 +121,7 @@ export default function () {
           <Link to="/resume">
             <NavLink>Resume</NavLink>
           </Link>
-          <Link to="/about">
+          <Link to="/">
             <NavLink>About</NavLink>
           </Link>
         </HeaderRight>

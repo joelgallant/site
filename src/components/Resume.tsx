@@ -87,13 +87,6 @@ const Container = styled.div`
     font-size: 0.9em;
   }
 
-  @media print {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%) translateY(-25px);
-  }
-
   @media (max-width: 900px) {
     width: 80vw;
   }
