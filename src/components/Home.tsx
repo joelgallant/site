@@ -54,7 +54,7 @@ const Box = styled.div`
 const LeftBox = styled(Box)`
   align-self: flex-start;
 
-  margin-right: 20%;
+  margin-right: 5%;
   @media (max-width: 900px) {
     margin-left: 0;
     margin-right: 0;
@@ -65,7 +65,7 @@ const RightBox = styled(Box)`
   align-self: flex-end;
   text-align: end;
 
-  margin-left: 20%;
+  margin-left: 5%;
   @media (max-width: 900px) {
     margin-left: 0;
     margin-right: 0;
